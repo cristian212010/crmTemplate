@@ -63,6 +63,11 @@ $all = $data->selectAll();
               <th scope="col">NOMBRES</th>
               <th scope="col">DIRECCION</th>
               <th scope="col">LOGROS</th>
+              <th scope="col">SKILLS</th>
+              <th scope="col">INGLES</th>
+              <th scope="col">SER</th>
+              <th scope="col">REVIEW</th>
+              <th scope="col">ESPECIALIDAD</th>
               <th scope="col">DETALLE</th>
             </tr>
           </thead>
@@ -77,6 +82,11 @@ $all = $data->selectAll();
               <td><?php echo $value['nombres']?></td>
               <td><?php echo $value['direccion']?></td>
               <td><?php echo $value['logros']?></td>
+              <td><?php echo $value['skills']?></td>
+              <td><?php echo $value['ingles']?></td>
+              <td><?php echo $value['ser']?></td>
+              <td><?php echo $value['review']?></td>
+              <td><?php echo $value['especialidad']?></td>
               <td>
                 <a class="btn btn-danger" href="borrarEstudiantes.php?id=<?=$value['id']?>&req=delete">Borrar</a>
               </td>
@@ -140,6 +150,58 @@ $all = $data->selectAll();
                   class="form-control"  
                  
                 />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="logros" class="form-label">Skills</label>
+                <input 
+                  type="number"
+                  id="skills"
+                  name="skills"
+                  class="form-control"  
+                 
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="logros" class="form-label">Ingles</label>
+                <select name="ingles" id="ingles">
+                  <option value="">Seleccione nivel</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="middle">Middle</option>
+                  <option value="advance">Advance</option>
+                </select>
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="logros" class="form-label">Ser</label>
+                <input 
+                  type="number"
+                  id="ser"
+                  name="ser"
+                  class="form-control"  
+                 
+                />
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="logros" class="form-label">Review</label>
+                <select name="review" id="review">
+                  <option value="">Seleccion opcion</option>
+                  <option value="bueno">Bueno</option>
+                  <option value="regular">Regular</option>
+                  <option value="pesimo">Pesimo</option>
+                </select>
+              </div>
+
+              <div class="mb-1 col-12">
+                <label for="logros" class="form-label">Especialidad</label>
+                <select name="especialidad" id="especialidad">
+                  <option value="">Seleccione especialidad</option>
+                  <option value="frontend">FrontEnd</option>
+                  <option value="backend">BackEnd</option>
+                  <option value="fullstack">FullStack</option>
+                </select>
               </div>
           
               <div class=" col-12 m-2">

@@ -6,6 +6,11 @@ class Config{
     private $nombres;
     private $direccion;
     private $logros;
+    private $skills;
+    private $ingles;
+    private $ser;
+    private $review;
+    private $especialidad;
     protected $dbCnx;
 
     public function __construct($id=0, $nombres='', $direccion='', $logros=''){
@@ -48,10 +53,50 @@ class Config{
         return $this->logros;
     }
 
+    public function setSkills($skills){
+        $this->skills = $skills;
+    }
+
+    public function getSkills(){
+        return $this->skills;
+    }
+
+    public function setIngles($ingles){
+        $this->ingles = $ingles;
+    }
+
+    public function getIngles(){
+        return $this->ingles;
+    }
+
+    public function setSer($ser){
+        $this->ser = $ser;
+    }
+
+    public function getSer(){
+        return $this->ser;
+    }
+
+    public function setReview($review){
+        $this->review = $review;
+    }
+
+    public function getReview(){
+        return $this->review;
+    }
+
+    public function setEspecialidad($especialidad){
+        $this->especialidad = $especialidad;
+    }
+
+    public function getEspecialidad(){
+        return $this->especialidad;
+    }
+
     public function insertData(){
         try {
-            $stm = $this-> dbCnx -> prepare("INSERT INTO campers (nombres, direccion, logros) values (?,?,?)");
-            $stm -> execute([$this->nombres, $this->direccion, $this->logros]);
+            $stm = $this-> dbCnx -> prepare("INSERT INTO campers (nombres, direccion, logros, skills, ingles, ser, review, especialidad) values (?,?,?,?,?,?,?,?)");
+            $stm -> execute([$this->nombres, $this->direccion, $this->logros, $this->skills, $this->ingles, $this->ser, $this->review, $this->especialidad]);
         } catch (Exeption $e) {
             return $e->getMessage();
         }
