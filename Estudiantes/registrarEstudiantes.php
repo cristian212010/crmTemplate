@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST['guardar'])) {
-    require_once("config.php");
+    require_once("Estudiante.php");
 
-    $config = new Config();
+    $config = new Estudiante();
 
     $config-> setNombres($_POST['nombres']);
     $config-> setDireccion($_POST['direccion']);

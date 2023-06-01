@@ -1,7 +1,7 @@
 <?php
-require_once("config.php");
+require_once("Estudiante.php");
 
-$data = new Config();
+$data = new Estudiante();
 $all = $data->selectAll();
 ?>
 
@@ -33,7 +33,7 @@ $all = $data->selectAll();
       <div class="perfil">
         <h3 style="margin-bottom: 2rem;">Camper Skills.</h3>
         <img src="images/Diseño sin título.png" alt="" class="imagenPerfil">
-        <h3>Maicol Estrada</h3>
+        <h3>Cristian Luna</h3>
       </div>
       <div class="menus">
         <a href="/Home/home.php" style="display: flex;gap:2px;">
